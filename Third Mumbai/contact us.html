@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - Third Mumbai</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(-45deg, #c2e9fb, #a1c4fd, #d4fc79, #96e6a1);
+      background-size: 400% 400%;
+      animation: gradientBG 14s ease infinite;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .form-container {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 26px 24px;
+      border-radius: 22px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      width: 90%;
+      max-width: 520px;
+      text-align: center;
+      border: 1px solid #bbe1fa;
+    }
+
+    .form-container img {
+      width: 85px;
+      margin-bottom: 12px;
+    }
+
+    h2 {
+      color: #0f4c75;
+      margin-bottom: 16px;
+    }
+
+    label {
+      font-weight: 600;
+      display: block;
+      text-align: left;
+      margin-top: 10px;
+      color: #0f4c75;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      margin-bottom: 14px;
+      border: 1px solid #3282b8;
+      border-radius: 10px;
+      background: #f0f9ff;
+      font-size: 15px;
+      color: #003344;
+    }
+
+    button {
+      width: 90%;
+      background: linear-gradient(to right, #00c6ff, #0072ff);
+      color: white;
+      border: none;
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 14px;
+      cursor: pointer;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background: linear-gradient(to right, #0099cc, #0052cc);
+    }
+
+    .back-btn {
+      margin: 25px 0;
+      background: #0f4c75;
+      color: #fff;
+      padding: 10px 24px;
+      border-radius: 30px;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 15px;
+    }
+
+    .back-btn:hover {
+      background: #06283d;
+    }
+
+    @media (max-width: 400px) {
+      .form-container {
+        max-width: 95%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 📩 Contact Form -->
+  <div class="form-container">
+    <img src="images/logo.png" alt="Third Mumbai Developer Logo" />
+    <h2>Contact Us</h2>
+    <form id="contactForm" method="POST">
+      <label for="name">Full Name *</label>
+      <input type="text" id="name" name="name" required placeholder="Enter your full name" />
+
+      <label for="number">Mobile Number *</label>
+      <input type="tel" id="number" name="number" maxlength="10" pattern="[0-9]{10}" required placeholder="10-digit mobile number" />
+
+      <label for="email">Email ID *</label>
+      <input type="email" id="email" name="email" required placeholder="Enter valid email address" />
+
+      <label for="area">Select Area *</label>
+      <select id="area" name="area" required>
+        <option value="">-- Select Area --</option>
+        <option>Churchgate</option>
+        <option>Marine Lines</option>
+        <option>Charni Road</option>
+        <option>Grant Road</option>
+        <option>Bombay Central</option>
+        <option>Dadar</option>
+        <option>Mahim</option>
+        <option>Bandra</option>
+        <option>Khar</option>
+        <option>Santacruz</option>
+        <option>Vile Parle</option>
+        <option>Andheri</option>
+        <option>Jogeshwari</option>
+        <option>Goregaon</option>
+        <option>Malad</option>
+        <option>Kandarpada</option>
+        <option>Borivali</option>
+        <option>Dahisar</option>
+        <option>Mira Road</option>
+        <option>Bhayandar</option>
+        <option>Naigaon</option>
+        <option>Vasai</option>
+        <option>Nalasopara</option>
+        <option>Virar</option>
+        <option>Vaitarana</option>
+        <option>Saphale</option>
+        <option>Kelve Road</option>
+        <option>Palghar</option>
+        <option>Umroli Road</option>
+        <option>Boisar</option>
+        <option>Vangaon</option>
+        <option>Dahanu Road</option>
+      </select>
+
+      <label for="room">Room Type *</label>
+      <select id="room" name="room" required>
+        <option value="">-- Select Room Type --</option>
+        <option>1RK for Sale</option>
+        <option>1BHK for Sale</option>
+        <option>2BHK for Sale</option>
+        <option>3BHK for Sale</option>
+        <option>Shop for Sale</option>
+        <option>Gala for Sale</option>
+        <option>Chawl Room for Sale</option>
+        <option>1RK for Buy</option>
+        <option>1BHK for Buy</option>
+        <option>2BHK for Buy</option>
+        <option>3BHK for Buy</option>
+        <option>Shop for Buy</option>
+        <option>Gala for Buy</option>
+        <option>Chawl Room for Buy</option>
+      </select>
+
+      <label for="message">Your Message</label>
+      <textarea id="message" name="message" placeholder="Type your message here what you want..."></textarea>
+
+      <!-- ✅ Honeypot (spam protection) -->
+      <input type="text" name="_honey" style="display:none">
+
+      <!-- ✅ Redirect after submit -->
+      <input type="hidden" name="_next" value="index.html">
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <!-- 🔙 Back Button -->
+  <button class="back-btn" onclick="window.location.href='index.html'">⬅️ Back to Home</button>
+
+  <script>
+    const WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbyKhVrtx3I_mg4zZx057Nvfsur28_1-POGDs5dkJ76lva3V-gXazElB5N22GoCBsFv2/exec";
+
+    document.getElementById("contactForm").addEventListener("submit", function(e){
+      e.preventDefault();
+      const form = e.target;
+      const data = new FormData(form);
+
+      fetch(WEBHOOK_URL, {
+        method: "POST",
+        body: data
+      })
+      .then(res => res.json())
+      .then(response => {
+        if (response.result === "success") {
+          alert("✅ Submitted successfully!");
+          form.reset();
+        } else {
+          alert("❌ Something went wrong!");
+        }
+      })
+      .catch(error => {
+        console.error("Error!", error.message);
+        alert("🚫 Failed to submit. Try again later.");
+      });
+    });
+  </script>
+
+</body>
+</html>

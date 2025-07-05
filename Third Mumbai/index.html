@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Third Mumbai Housing Developers Pvt. Ltd.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Urbanist', sans-serif;
+      background: whitesmoke;
+      color: #1a1a1a;
+    }
+
+    header {
+      background: linear-gradient(to right, #005AA7, #FFFDE4);
+      color: #eceff1, black;
+      padding: 20px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      text-align: center;
+      flex-wrap: wrap;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .site-title {
+      flex: 1 1 auto;
+    }
+
+    .site-title h1 {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+    .site-title p {
+      font-size: 0.95rem;
+      color: #005f73;
+      margin-top: 4px;
+      font-weight: 500;
+    }
+
+    .contact-btn {
+      background: #0077cc;
+      color: #fff;
+      padding: 10px 24px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      white-space: nowrap;
+    }
+
+    .contact-btn:hover {
+      background: #005fa3;
+      transform: translateY(-1px);
+    }
+
+    .hero {
+      min-height: 75vh;
+      background: url('https://source.unsplash.com/1600x900/?mumbai,city') no-repeat center center/cover;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+      padding-bottom: 300px;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 16px 28px;
+      border-radius: 12px;
+    }
+
+    .gallery {
+      margin-top: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 15px;
+      padding: 25px 30px 40px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      background: #001f3f;
+      color: #eee;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+        padding: 12px 20px;
+      }
+
+      .contact-btn {
+        padding: 8px 20px;
+        font-size: 0.95rem;
+      }
+
+      .gallery {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🔝 Header Section -->
+  <header>
+    <div class="site-title">
+      <h1>Third Mumbai Housing Developers Pvt. Ltd.</h1>
+      <strong>Your Trusted Partner in Third Mumbai Property</strong>
+    </div>
+    <a href="contact us.html" class="contact-btn">📞 Contact Us</a>
+  </header>
+
+  <!-- 🏙️ Gallery Section (Fixed) -->
+  <section class="gallery">
+    <img src="images/1st.jpg" alt="Mumbai Train">
+    <img src="images/8th.jpg" alt="Real Estate">
+    <img src="images/2nd.jpg" alt="Marine Drive">
+    <img src="images/3rd.jpg" alt="Property">
+    <img src="images/4th.jpg" alt="Property">
+    <img src="images/5th.jpg" alt="Want To Make">
+    <img src="images/6th.jpg" alt="Real Estate">
+    <img src="images/7th.jpg" alt="3rd Mumbai">
+    </section>
+
+  <!-- 🔚 Footer -->
+  <footer>
+    &copy; 2025 Third Mumbai Housing Developers Pvt. Ltd. | Built with ❤️ in Mumbai
+  </footer>
+
+</body>
+</html>
